@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import NavbarWhite from './NavbarWhite'
 import SliderComponent from './SliderComponent';
-import Categories from './Categories';
 import './Homepage.css';
+import BestSeller from './BestSeller';
+import Categories from './Categories';
+import Footer from './Footer';
 
 function Homepage() {
   const [curclick,setClick] = useState("Women")
@@ -46,7 +48,9 @@ function Homepage() {
       </div>
     <NavbarWhite></NavbarWhite>
     <SliderComponent theme = {curclick}></SliderComponent>
-    <Categories theme = {curclick} ></Categories>
+    <BestSeller theme = {curclick} ></BestSeller>
+    <Categories theme={curclick}></Categories>
+    <Footer></Footer>
     </>
   )
 }
