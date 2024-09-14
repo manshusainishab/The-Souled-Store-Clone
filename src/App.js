@@ -1,12 +1,14 @@
 import './App.css';
-import NavbarRed from './components/NavbarRed';
-import NavbarWhite from './components/NavbarWhite';
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+import Homepage from './components/Homepage';
 
 function App() {
   return (
     <>
-    <NavbarRed/>
-    <NavbarWhite/>
+    <Homepage></Homepage>
     </>
   );
 }

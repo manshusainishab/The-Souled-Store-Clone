@@ -1,7 +1,11 @@
 import React,{useState} from 'react'
-import './navbarRed.css';
+import NavbarWhite from './NavbarWhite'
+import SliderComponent from './SliderComponent';
+import Categories from './Categories';
+import './Homepage.css';
 
-function NavbarRed() {
+function Homepage() {
+  const [curclick,setClick] = useState("Women")
   const [women,setWomen] = useState('clicked');
   const [men,setMen] = useState('notclicked');
   const [kid,setKid] = useState('notclicked');
@@ -10,18 +14,22 @@ function NavbarRed() {
     setWomen('clicked')
     setMen('notclicked')
     setKid('notclicked')
+    setClick("Women")
   }
   const handelmen = ()=> {
     setMen('clicked')
     setWomen('notclicked')
     setKid('notclicked')
+    setClick("Men")
   }
   const handelkid = ()=> {
     setKid('clicked')
     setMen('notclicked')
     setWomen('notclicked')
+    setClick("Kid")
   }
   return (
+    <>
       <div className='topbar'>
         <div className='inner-topbar'>
             <ul className='topbar-list'>
@@ -36,7 +44,11 @@ function NavbarRed() {
             </ul>
         </div>
       </div>
+    <NavbarWhite></NavbarWhite>
+    <SliderComponent theme = {curclick}></SliderComponent>
+    <Categories theme = {curclick} ></Categories>
+    </>
   )
 }
 
-export default NavbarRed
+export default Homepage;
