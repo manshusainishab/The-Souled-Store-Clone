@@ -42,7 +42,9 @@ const SliderComponent = ({ theme }) => {
     infinite: true,     // Loop slides
     speed: 500,         // Transition speed
     slidesToShow: 1,    // Show one slide at a time
-    slidesToScroll: 1,  // Scroll one slide at a time
+    slidesToScroll: 1,
+    autoplay: true,     // Enable auto-play
+    autoplaySpeed: 3000,  // Scroll one slide at a time
     responsive: [
       {
         breakpoint: 768, // Tablet & mobile

@@ -5,6 +5,8 @@ import './Homepage.css';
 import BestSeller from './BestSeller';
 import Categories from './Categories';
 import Footer from './Footer';
+import Header from './header';
+import { Link } from 'react-router-dom'
 
 function Homepage() {
   const [curclick,setClick] = useState("Women")
@@ -40,9 +42,10 @@ function Homepage() {
                 <li className={kid} onClick={handelkid} id='topbar-category-list'>KIDS</li>
             </ul>
             <ul className='topbar-list'>
-                <li id='topbar-option-list'><a href='/'>TRACK ORDER</a></li>
-                <li id='topbar-option-list'><a href='/'>CONTACT US</a></li>
+                <li id='topbar-option-list'><Link to='/UnderConstruction'>TRACK ORDER</Link></li>
+                <li id='topbar-option-list'><a href='https://www.linkedin.com/in/manshusainishab/'>CONTACT US</a></li>
                 <li id='topbar-option-list'><i class="fa fa-mobile-phone"></i>  <a href='https://play.google.com/store/apps/details?id=com.thesouledstore'>DOWNLOAD APP</a></li>
+                <li id='topbar-option-list'><Header></Header></li>
             </ul>
         </div>
       </div>

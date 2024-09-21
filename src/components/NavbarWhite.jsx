@@ -14,7 +14,7 @@ function NavbarWhite() {
 
   return (
     <div className="navbar">
-        <img alt="souledstorelogo" className='img' src='https://www.thesouledstore.com/static/img/newlogo.8dcc6cc.png'/>
+        <a href="/" ><img alt="souledstorelogo" className='img' src='https://www.thesouledstore.com/static/img/newlogo.8dcc6cc.png'/></a>
       <ul className="navbar-list">
         <li className="navbar-item" onMouseEnter={() => handleMouseEnter('MINIMALS')} onMouseLeave={handleMouseLeave}>
           MINIMALS <span className="new-tag">NEW</span>
@@ -51,7 +51,7 @@ function NavbarWhite() {
           <i className="fa fa-search"></i>
         </li>
         <li className="navbar-item">
-          <i className="fa fa-user"></i>
+          <a href="./profile"><i className="fa fa-user"></i></a>
         </li>
         <li className="navbar-item">
           <i className="fa fa-heart"></i>

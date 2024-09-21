@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -14,11 +15,11 @@ const Footer = () => {
         <div className="footer-column">
           <h3>NEED HELP</h3>
           <ul>
-            <li><a href="/">Contact Us</a></li>
-            <li><a href="/">Track Order</a></li>
-            <li><a href="/">Returns & Refunds</a></li>
-            <li><a href="/">FAQs</a></li>
-            <li><a href="/">My Account</a></li>
+            <li><a href="https://www.linkedin.com/in/manshusainishab/">Contact Us</a></li>
+            <li><Link to='/UnderConstruction'>Track Order</Link></li>
+            <li><Link to='/UnderConstruction'>Returns & Refunds</Link></li>
+            <li><Link to='/UnderConstruction'>FAQs</Link></li>
+            <li><a href="https://www.linkedin.com/in/manshusainishab/">My Account</a></li>
           </ul>
           <p><i data-v-3610fc48="" class=" circleicon_light fa fa-rupee"></i>COD Available</p>
           <p><i data-v-3610fc48="" class="circleicon_light fa fa-refresh"></i>30 Days Easy Returns</p>
@@ -27,31 +28,28 @@ const Footer = () => {
         <div className="footer-column">
           <h3>COMPANY</h3>
           <ul>
-            <li><a href="/">About Us</a></li>
-            <li><a href="/">Careers</a></li>
-            <li><a href="/">Community Initiatives</a></li>
-            <li><a href="/">Souled Army</a></li>
+            <li><a href="https://manshusainishab.github.io/portfolio/">About Us</a></li>
+            <li><a href="https://tsspeopleportal.darwinbox.in/ms/candidate/careers">Careers</a></li>
+            <li><a href="https://www.thesouledstore.com/from-the-soul">Community Initiatives</a></li>
           </ul>
         </div>
 
         <div className="footer-column">
           <h3>MORE INFO</h3>
           <ul>
-            <li><a href="/">T&C</a></li>
-            <li><a href="/">Privacy Policy</a></li>
-            <li><a href="/">Sitemap</a></li>
-            <li><a href="/">Blogs</a></li>
+            <li><Link to='/UnderConstruction'>T&C</Link></li>
+            <li><Link to='/UnderConstruction'>Privacy Policy</Link></li>
+            <li><Link to='/UnderConstruction'>Sitemap</Link></li>
+            <li><a href="https://www.thesouledstore.com/blog/">Blogs</a></li>
           </ul>
         </div>
 
         <div className="footer-column">
           <h3>STORE NEAR ME</h3>
           <ul>
-            <li><a href="/">Mumbai</a></li>
-            <li><a href="/">Pune</a></li>
-            <li><a href="/">Bengaluru</a></li>
-            <li><a href="/">Bangalore</a></li>
-            <li><a href="/">View More</a></li>
+            <li><a href="https://maps.app.goo.gl/tg8MVsG3X9qYSkWE8">Mumbai</a></li>
+            <li><a href="https://maps.app.goo.gl/MBieujFjej5y5wmY7">Pune</a></li>
+            <li><a href="https://maps.app.goo.gl/5dL8z82R5nkn1aVJ7">Bangalore</a></li>
           </ul>
         </div>
       </div>
@@ -59,14 +57,14 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className='footer-bottom-head'><i class="fa fa-mobile-phone"></i>   EXPERIENCE THE SOULED STORE APP</div>
         <div className="app-links">
-          <a href="/"><img src="https://tss-static-images.gumlet.io/icons/play-store.png" alt="Get it on Google Play" /></a>
-          <a href="/"><img src="https://tss-static-images.gumlet.io/icons/app-store.png" alt="Download on the App Store" /></a>
+          <a href="https://play.google.com/store/apps/details?id=com.thesouledstore" target='_blank'><img src="https://tss-static-images.gumlet.io/icons/play-store.png" alt="Get it on Google Play" /></a>
+          <a href="https://apps.apple.com/in/app/the-souled-store/id1493897434" target='_blank'><img src="https://tss-static-images.gumlet.io/icons/app-store.png" alt="Download on the App Store" /></a>
         </div>
         <div className="social-links">
           Follow Us:
-          <a href="https://www.facebook.com/souledstore/"><i className="fa fa-facebook"></i></a>
-          <a href="https://www.instagram.com/TheSouledStore/"><i className="fa fa-instagram"></i></a>
-          <a href="https://www.snapchat.com/add/thesouledstore"><i className="fa fa-snapchat"></i></a>
+          <a href="https://www.facebook.com/souledstore/" target='_blank' ><i className="fa fa-facebook"></i></a>
+          <a href="https://www.instagram.com/TheSouledStore/" target='_blank'><i className="fa fa-instagram"></i></a>
+          <a href="https://www.snapchat.com/add/thesouledstore" target='_blank' ><i className="fa fa-snapchat"></i></a>
           {/* <a href="/"><i className="fa fa-x"></i></a> Twitter (X) */}
         </div>
       </div>
