@@ -37,9 +37,8 @@ const Footer = () => {
         <div className="footer-column">
           <h3>MORE INFO</h3>
           <ul>
-            <li><Link to='/UnderConstruction'>T&C</Link></li>
-            <li><Link to='/UnderConstruction'>Privacy Policy</Link></li>
-            <li><Link to='/UnderConstruction'>Sitemap</Link></li>
+            <li><Link to='/T&C'>T&C</Link></li>
+            <li><Link to='/Privacypolicy'>Privacy Policy</Link></li>
             <li><a href="https://www.thesouledstore.com/blog/">Blogs</a></li>
           </ul>
         </div>

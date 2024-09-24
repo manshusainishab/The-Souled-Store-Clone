@@ -1,54 +1,18 @@
-import React,{useState} from 'react'
 import NavbarWhite from './NavbarWhite'
 import SliderComponent from './SliderComponent';
 import './Homepage.css';
 import BestSeller from './BestSeller';
 import Categories from './Categories';
 import Footer from './Footer';
-import Header from './header';
-import { Link } from 'react-router-dom'
+import { PageState } from '../contexts/pagecontext/PageState';
+import { useContext } from 'react';
+import NavbarRed from './NavbarRed';
 
 function Homepage() {
-  const [curclick,setClick] = useState("Women")
-  const [women,setWomen] = useState('clicked');
-  const [men,setMen] = useState('notclicked');
-  const [kid,setKid] = useState('notclicked');
-
-  const handelwomen = ()=> {
-    setWomen('clicked')
-    setMen('notclicked')
-    setKid('notclicked')
-    setClick("Women")
-  }
-  const handelmen = ()=> {
-    setMen('clicked')
-    setWomen('notclicked')
-    setKid('notclicked')
-    setClick("Men")
-  }
-  const handelkid = ()=> {
-    setKid('clicked')
-    setMen('notclicked')
-    setWomen('notclicked')
-    setClick("Kid")
-  }
+  const { curclick } = useContext(PageState);
   return (
     <>
-      <div className='topbar'>
-        <div className='inner-topbar'>
-            <ul className='topbar-list'>
-                <li className={women} onClick={handelwomen} id='topbar-category-list'>WOMEN</li>
-                <li className={men} onClick={handelmen} id='topbar-category-list'>MEN</li>
-                <li className={kid} onClick={handelkid} id='topbar-category-list'>KIDS</li>
-            </ul>
-            <ul className='topbar-list'>
-                <li id='topbar-option-list'><Link to='/UnderConstruction'>TRACK ORDER</Link></li>
-                <li id='topbar-option-list'><a href='https://www.linkedin.com/in/manshusainishab/'>CONTACT US</a></li>
-                <li id='topbar-option-list'><i class="fa fa-mobile-phone"></i>  <a href='https://play.google.com/store/apps/details?id=com.thesouledstore'>DOWNLOAD APP</a></li>
-                <li id='topbar-option-list'><Header></Header></li>
-            </ul>
-        </div>
-      </div>
+    <NavbarRed></NavbarRed>
     <NavbarWhite></NavbarWhite>
     <SliderComponent theme = {curclick}></SliderComponent>
     <BestSeller theme = {curclick} ></BestSeller>
