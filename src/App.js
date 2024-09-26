@@ -8,9 +8,10 @@ import './App.css';
 import { AuthProvider } from "./contexts/authContext";
 import { useRoutes } from "react-router-dom";
 import UnderConstruction from "./components/UnderConstruction";
-import StateProvider from "./contexts/pagecontext/PageState";
+import { StateProvider, ProductData } from './contexts/pagecontext/PageState';
 import TandC from "./components/TandC";
 import Privacypolicy from "./components/Privacypolicy";
+import ProductPage from "./components/Productpage";
 
 function App() {
   const routesArray = [
@@ -41,15 +42,21 @@ function App() {
     {
     path: "/Privacypolicy",
     element: <Privacypolicy/>
+    },
+    {
+      path: "/products",
+      element: <ProductPage></ProductPage>
     }
   ];
   let routesElement = useRoutes(routesArray);
   return (
     <div  style={{ margin: 0, padding: 0 }}>
     <StateProvider>
+      <ProductData>
     <AuthProvider>
       <div className="w-full h-screen flex flex-col">{routesElement}</div>
     </AuthProvider>
+    </ProductData>
     </StateProvider>
     </div>
     

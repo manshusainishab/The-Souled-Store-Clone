@@ -65,5 +65,16 @@
   
   .dropdown-item:hover {
     background-color: #f0f0f0;
+    color: red;
+  }
+  .dropdown-item a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Use the color of the parent element */
+  }
+  
+  .dropdown-item a:hover {
+    color: inherit; /* No color change on hover */
+    background: none; /* No background change on hover */
+    cursor: pointer; /* Optional: Change the cursor to pointer */
   }
   

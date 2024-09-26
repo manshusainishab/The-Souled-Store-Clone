@@ -2,41 +2,22 @@ import React from 'react';
 import Slider from 'react-slick';
 import './BestSeller.css';
 
-const BestSeller = ({ theme }) => {
-  const Women = [
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Most-Loved-Tile_01_1_IrtLjoF.jpg?format=webp&w=480&dpr=2.0"
-    },
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Most-Loved-Tile_02_1_UP9J7Hm.jpg?format=webp&w=480&dpr=2.0"
-    },
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Most-Loved-Tile_03_1_TQSd9fl.jpg?format=webp&w=480&dpr=2.0"
-    }
-  ];
+import WomenBanner1 from '../images/WomenBanner1.webp';
+import WomenBanner2 from '../images/WomenBanner2.webp';
+import WomenBanner3 from '../images/WomenBanner3.webp';
 
-  const Men = [
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Best_Sellers_Tiles_Template_copy.3.jpg?format=webp&w=480&dpr=2.0"
-    },
-    { 
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Best_Sellers_Tiles_Template_copy.5.jpg?format=webp&w=480&dpr=2.0" 
-    },
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Best_Sellers_Tiles_Template_copy.jpg?format=webp&w=480&dpr=2.0"
-    }
-  ];
-  const Kid = [
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/Collection-tile_DVVrhic.jpg?format=webp&w=480&dpr=2.0"
-    },
-    { 
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/HELLO_KITTY_KIDS_Collection_tile_7lFFdox.jpg?format=webp&w=480&dpr=2.0"
-    },
-    {
-      imgSrc: "https://prod-img.thesouledstore.com/public/theSoul/storage/mobile-cms-media-prod/product-images/collection_tile_copy_VNyoOPk.jpg?format=webp&w=480&dpr=2.0"
-    }
-  ];
+import MenBanner1 from '../images/MenBanner1.webp';
+import MenBanner2 from '../images/MenBanner2.webp';
+import MenBanner3 from '../images/MenBanner3.webp';
+
+import KidBanner1 from '../images/KidBanner1.webp';
+import KidBanner2 from '../images/KidBanner2.webp';
+import KidBanner3 from '../images/KidBanner3.webp';
+
+const BestSeller = ({ theme }) => {
+  const Women = [WomenBanner1,WomenBanner2,WomenBanner3];
+  const Men = [MenBanner1,MenBanner2,MenBanner3];
+  const Kid = [KidBanner1,KidBanner2,KidBanner3];
 
   const getImagesByTheme = (theme) => {
     switch (theme) {
@@ -84,7 +65,7 @@ const BestSeller = ({ theme }) => {
       <Slider {...settings}>
         {images.map((item, index) => (
           <div className="card" key={index}>
-            <img src={item.imgSrc} alt={`Slide ${index + 1}`} />
+            <img src={item} alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </Slider>
