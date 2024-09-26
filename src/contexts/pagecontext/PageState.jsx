@@ -628,8 +628,9 @@ Hoodies: [{
   };
 
   // Move to cart
-  const moveToCart = (product) => {
+  const moveToCart = (product,size) => {
     if (!cart.find(item => item.id === product.id)) {
+      product.sizes = size
       setCart([...cart, product]);
       removeFromWishlist(product.id);
     }

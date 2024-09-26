@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ProductState } from '../contexts/pagecontext/PageState';
 import NavbarRed from './NavbarRed';
 import NavbarWhite from './NavbarWhite';
@@ -14,6 +14,17 @@ const ProductPage = () => {
     // Initialize state as an object to hold selected sizes for each product
     const [selectedSizes, setSelectedSizes] = useState({});
 
+    // Automatically select the first size for each product with available sizes when the component mounts
+    useEffect(() => {
+        const initialSizes = {};
+        products.forEach((product) => {
+            if (product.sizes && product.sizes.length > 0) {
+                initialSizes[product.id] = product.sizes[0]; // Set the first size as default
+            }
+        });
+        setSelectedSizes(initialSizes); // Initialize selectedSizes state
+    }, [products]);
+
     // Function to handle size selection for individual products
     const handleSizeSelect = (productId, size) => {
         setSelectedSizes((prevSizes) => ({
@@ -24,8 +35,13 @@ const ProductPage = () => {
 
     // Function to handle add to cart action with a toast notification
     const handleAddToCart = (product) => {
-        moveToCart(product);
-        toast.success(`${product.name} added to cart!`);
+        const selectedSize = selectedSizes[product.id];
+        if (selectedSize) {
+            moveToCart(product, selectedSize);
+            toast.success(`${product.name} (Size: ${selectedSize}) added to cart!`);
+        } else {
+            toast.error('Please select a size before adding to cart.');
+        }
     };
 
     // Function to handle add to wishlist action with a toast notification

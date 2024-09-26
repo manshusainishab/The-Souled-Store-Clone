@@ -38,6 +38,7 @@ const Cart = () => {
                 <img src={item.imageUrl} alt={item.name} className="cart-item-image" />
                 <div className="cart-item-details">
                   <h2 className="cart-item-name">{item.name}</h2>
+                  <h2 className="sizeh2">{item.sizes}</h2>
                   <p className="cart-item-price">₹{item.price}</p>
                   <button 
                     className="remove-item-button" 
