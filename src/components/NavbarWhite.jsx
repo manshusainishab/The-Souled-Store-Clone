@@ -44,11 +44,11 @@ function NavbarWhite() {
         {/* <li className="navbar-item">THEMES</li> */}
       </ul>
       <ul className="navbar-list icons">
-        <li className="navbar-item">
+        {/* <li className="navbar-item">
           <i className="fa fa-search"></i>
-        </li>
+        </li> */}
         <li className="navbar-item">
-          <Link to="./profile"><i className="fa fa-user"></i></Link>
+          <Link to="/profile"><i className="fa fa-user"></i></Link>
         </li>
         <li className="navbar-item">
           <Link to="/wishlist">
