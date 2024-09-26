@@ -46,3 +46,16 @@
   .fa-mobile-phone{
     font-size: 18px;
   }
+  /* General styles */
+.topbar-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+/* Hide the second ul on screens smaller than 768px (tablets and mobile) */
+@media screen and (max-width: 768px) {
+  .topbar-list-options {
+      display: none;
+  }
+}

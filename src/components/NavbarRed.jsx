@@ -16,10 +16,10 @@ export default function NavbarRed() {
                 <li className={men} onClick={handelmen} id='topbar-category-list'>MEN</li>
                 <li className={kid} onClick={handelkid} id='topbar-category-list'>KIDS</li>
             </ul>
-            <ul className='topbar-list'>
+            <ul className='topbar-list topbar-list-options'>
                 <li id='topbar-option-list'><Link to='/UnderConstruction'>TRACK ORDER</Link></li>
                 <li id='topbar-option-list'><a href='https://www.linkedin.com/in/manshusainishab/'>CONTACT US</a></li>
-                <li id='topbar-option-list'><i class="fa fa-mobile-phone"></i>  <a href='https://play.google.com/store/apps/details?id=com.thesouledstore'>DOWNLOAD APP</a></li>
+                <li id='topbar-option-list'><i className="fa fa-mobile-phone"></i>  <a href='https://play.google.com/store/apps/details?id=com.thesouledstore'>DOWNLOAD APP</a></li>
             </ul>
         </div>
       </div>
