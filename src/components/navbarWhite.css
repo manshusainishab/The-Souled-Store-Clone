@@ -77,4 +77,9 @@
     background: none; /* No background change on hover */
     cursor: pointer; /* Optional: Change the cursor to pointer */
   }
+  .fa{
+    text-decoration: none;
+    color: inherit;
+    background: none;
+  }
   

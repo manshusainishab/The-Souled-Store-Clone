@@ -48,7 +48,7 @@ function NavbarWhite() {
           <i className="fa fa-search"></i>
         </li>
         <li className="navbar-item">
-          <a href="./profile"><i className="fa fa-user"></i></a>
+          <Link to="./profile"><i className="fa fa-user"></i></Link>
         </li>
         <li className="navbar-item">
           <Link to="/wishlist">

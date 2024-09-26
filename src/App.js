@@ -14,6 +14,7 @@ import Privacypolicy from "./components/Privacypolicy";
 import ProductPage from "./components/Productpage";
 import Wishlist from "./components/Wishlist";
 import Cart from "./components/Cart";
+import Profile from "./components/Profile";
 
 function App() {
   const routesArray = [
@@ -56,6 +57,10 @@ function App() {
     {
       path: "/cart",
       element: <Cart></Cart>
+    },
+    {
+      path: '/profile',
+      element: <Profile></Profile>
     }
   ];
   let routesElement = useRoutes(routesArray);

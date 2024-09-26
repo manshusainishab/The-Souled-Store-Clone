@@ -1,7 +1,6 @@
 import React from 'react'
 import { PageState } from '../contexts/pagecontext/PageState'
 import { useContext } from 'react'
-import Header from './header'
 import { Link } from 'react-router-dom'
 
 export default function NavbarRed() {
@@ -21,7 +20,6 @@ export default function NavbarRed() {
                 <li id='topbar-option-list'><Link to='/UnderConstruction'>TRACK ORDER</Link></li>
                 <li id='topbar-option-list'><a href='https://www.linkedin.com/in/manshusainishab/'>CONTACT US</a></li>
                 <li id='topbar-option-list'><i class="fa fa-mobile-phone"></i>  <a href='https://play.google.com/store/apps/details?id=com.thesouledstore'>DOWNLOAD APP</a></li>
-                <li id='topbar-option-list'><Header></Header></li>
             </ul>
         </div>
       </div>
