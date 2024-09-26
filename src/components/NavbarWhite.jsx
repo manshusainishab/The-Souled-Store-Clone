@@ -23,7 +23,7 @@ function NavbarWhite() {
       <ul className="navbar-list">
         <li className="navbar-item" onMouseEnter={() => handleMouseEnter('TOPWEAR')} onMouseLeave={handleMouseLeave}>
           TOPWEAR ▼ <span className="new-tag">NEW</span>
-          {dropdown === 'TOPWEAR' && <DropdownMenu items={['T-Shirts', 'Shirts', 'Hoodies']} />}
+          {dropdown === 'TOPWEAR' && <DropdownMenu items={['TShirts', 'Shirts', 'Hoodies']} />}
         </li>
         <li className="navbar-item" onMouseEnter={() => handleMouseEnter('BOTTOMWEAR')} onMouseLeave={handleMouseLeave}>
           BOTTOMWEAR ▼
@@ -31,15 +31,15 @@ function NavbarWhite() {
         </li>
         <li className="navbar-item" onMouseEnter={() => handleMouseEnter('BESTSELLERS')} onMouseLeave={handleMouseLeave}>
           BESTSELLERS <span className="new-tag">NEW</span> ▼
-          {dropdown === 'BESTSELLERS' && <DropdownMenu items={['BestSeller #1', 'BestSeller #2', 'BestSeller #3']} />}
+          {dropdown === 'BESTSELLERS' && <DropdownMenu items={['BestSeller #1', 'BestSeller #2']} />}
         </li>
         <li className="navbar-item" onMouseEnter={() => handleMouseEnter('SNEAKERS')} onMouseLeave={handleMouseLeave}>
           SNEAKERS <span className="new-tag">NEW</span>
-          {dropdown === 'SNEAKERS' && <DropdownMenu items={['MarvelEdition']}/>}
+          {dropdown === 'SNEAKERS' && <DropdownMenu items={['Marvel Edition']}/>}
         </li>
         <li className="navbar-item" onMouseEnter={() => handleMouseEnter('ACCESSORIES')} onMouseLeave={handleMouseLeave}>
           ACCESSORIES ▼
-          {dropdown === 'ACCESSORIES' && <DropdownMenu items={['Perfumes', 'Bags', 'Belts']} />}
+          {dropdown === 'ACCESSORIES' && <DropdownMenu items={['Perfumes', 'Bags', 'Comic Books']} />}
         </li>
         {/* <li className="navbar-item">THEMES</li> */}
       </ul>

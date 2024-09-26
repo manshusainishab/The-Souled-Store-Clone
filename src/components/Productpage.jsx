@@ -36,21 +36,23 @@ const ProductPage = () => {
                                 <h1>{product.name}</h1>
                                 <p className="price">₹ {product.price}</p>
                                 
-                                {/* Size Selection */}
-                                <div className="size-selection">
-                                    <p>Please select a size:</p>
-                                    <div className="sizes">
-                                        {product.sizes.map((size) => (
-                                            <button
-                                                key={size}
-                                                className={`size-button ${selectedSizes[product.id] === size ? 'active' : ''}`}
-                                                onClick={() => handleSizeSelect(product.id, size)} // Pass product id and size
-                                            >
-                                                {size}
-                                            </button>
-                                        ))}
+                                {/* Size Selection (Only if sizes exist) */}
+                                {product.sizes && product.sizes.length > 0 && (
+                                    <div className="size-selection">
+                                        <p>Please select a size:</p>
+                                        <div className="sizes">
+                                            {product.sizes.map((size) => (
+                                                <button
+                                                    key={size}
+                                                    className={`size-button ${selectedSizes[product.id] === size ? 'active' : ''}`}
+                                                    onClick={() => handleSizeSelect(product.id, size)} // Pass product id and size
+                                                >
+                                                    {size}
+                                                </button>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
+                                )}
 
                                 {/* Quantity Selection */}
                                 <div className="quantity-selection">
