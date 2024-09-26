@@ -4,8 +4,10 @@ import NavbarRed from './NavbarRed';
 import NavbarWhite from './NavbarWhite';
 import Footer from './Footer';
 import './productpage.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for react-toastify
 
-const ProductPage = () => { 
+const ProductPage = () => {
     const { whichData, data, addToWishlist, moveToCart } = useContext(ProductState); // Destructure to get whichData and data
     const products = data[whichData];  // Access product list
 
@@ -20,6 +22,18 @@ const ProductPage = () => {
         }));
     };
 
+    // Function to handle add to cart action with a toast notification
+    const handleAddToCart = (product) => {
+        moveToCart(product);
+        toast.success(`${product.name} added to cart!`);
+    };
+
+    // Function to handle add to wishlist action with a toast notification
+    const handleAddToWishlist = (product) => {
+        addToWishlist(product);
+        toast.info(`${product.name} added to wishlist!`);
+    };
+
     return (
         <>
             <NavbarRed />
@@ -31,11 +45,11 @@ const ProductPage = () => {
                             <div className="product-gallery">
                                 <img src={product.imageUrl} alt={product.name} className="main-image" />
                             </div>
-                            
+
                             <div className="product-details">
                                 <h1>{product.name}</h1>
                                 <p className="price">₹ {product.price}</p>
-                                
+
                                 {/* Size Selection (Only if sizes exist) */}
                                 {product.sizes && product.sizes.length > 0 && (
                                     <div className="size-selection">
@@ -68,14 +82,26 @@ const ProductPage = () => {
 
                                 {/* Add to Cart / Wishlist */}
                                 <div className="action-buttons">
-                                    <button className="add-to-cart" onClick={()=>moveToCart(product)}>Add to Cart</button>
-                                    <button className="add-to-wishlist" onClick={()=>addToWishlist(product)}>Add to Wishlist</button>
+                                    <button className="add-to-cart" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+                                    <button className="add-to-wishlist" onClick={() => handleAddToWishlist(product)}>Add to Wishlist</button>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
+            {/* Toast Container to display toasts */}
+            <ToastContainer 
+                position="top-right" 
+                autoClose={3000} 
+                hideProgressBar={false} 
+                closeOnClick 
+                pauseOnHover 
+                draggable 
+                theme="colored"
+            />
+
             <Footer />
         </>
     );
