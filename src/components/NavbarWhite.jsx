@@ -51,10 +51,12 @@ function NavbarWhite() {
           <a href="./profile"><i className="fa fa-user"></i></a>
         </li>
         <li className="navbar-item">
-          <i className="fa fa-heart"></i>
+          <Link to="/wishlist">
+          <i className="fa fa-heart"></i></Link>
         </li>
         <li className="navbar-item">
-          <i className="fa fa-shopping-bag"></i>
+        <Link to="/Cart">
+          <i className="fa fa-shopping-bag"></i></Link>
         </li>
         </ul>
     </div>

@@ -12,6 +12,8 @@ import { StateProvider, ProductData } from './contexts/pagecontext/PageState';
 import TandC from "./components/TandC";
 import Privacypolicy from "./components/Privacypolicy";
 import ProductPage from "./components/Productpage";
+import Wishlist from "./components/Wishlist";
+import Cart from "./components/Cart";
 
 function App() {
   const routesArray = [
@@ -46,6 +48,14 @@ function App() {
     {
       path: "/products",
       element: <ProductPage></ProductPage>
+    },
+    {
+      path: "/wishlist",
+      element: <Wishlist></Wishlist>
+    },
+    {
+      path: "/cart",
+      element: <Cart></Cart>
     }
   ];
   let routesElement = useRoutes(routesArray);

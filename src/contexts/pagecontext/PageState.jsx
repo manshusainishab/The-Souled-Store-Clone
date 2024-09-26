@@ -611,8 +611,44 @@ Hoodies: [{
 }]
 
   }
+
+  const [wishlist, setWishlist] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  // Add to wishlist
+  const addToWishlist = (product) => {
+    if (!wishlist.find(item => item.id === product.id)) {
+      setWishlist([...wishlist, product]);
+    }
+  };
+
+  // Remove from wishlist
+  const removeFromWishlist = (productId) => {
+    setWishlist(wishlist.filter(item => item.id !== productId));
+  };
+
+  // Move to cart
+  const moveToCart = (product) => {
+    if (!cart.find(item => item.id === product.id)) {
+      setCart([...cart, product]);
+      removeFromWishlist(product.id);
+    }
+  }
+  const removeFromCart = (productId) => {
+    setCart(cart.filter(item => item.id !== productId));
+  };
+
+
   const allFunction = {
-    whichData,data,changeData
+    whichData,
+    data,
+    changeData,
+    wishlist,
+    addToWishlist,
+    removeFromWishlist,
+    moveToCart,
+    cart,
+    removeFromCart
   }
 
 

@@ -6,7 +6,7 @@ import Footer from './Footer';
 import './productpage.css';
 
 const ProductPage = () => { 
-    const { whichData, data } = useContext(ProductState); // Destructure to get whichData and data
+    const { whichData, data, addToWishlist, moveToCart } = useContext(ProductState); // Destructure to get whichData and data
     const products = data[whichData];  // Access product list
 
     // Initialize state as an object to hold selected sizes for each product
@@ -68,8 +68,8 @@ const ProductPage = () => {
 
                                 {/* Add to Cart / Wishlist */}
                                 <div className="action-buttons">
-                                    <button className="add-to-cart">Add to Cart</button>
-                                    <button className="add-to-wishlist">Add to Wishlist</button>
+                                    <button className="add-to-cart" onClick={()=>moveToCart(product)}>Add to Cart</button>
+                                    <button className="add-to-wishlist" onClick={()=>addToWishlist(product)}>Add to Wishlist</button>
                                 </div>
                             </div>
                         </div>
